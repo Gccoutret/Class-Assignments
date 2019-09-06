@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body style="background-color:black">
+<div style= color:white> 
+    <h1>Car Adventures!</h1>
+    <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" for a tune up.</h2>
+    <h2>See console for stats.</h2>
+</div>
+
+<script>
+
+  var car = {
+       //carfacts
+        make: "Toyota",
+        model: "Tacoma",
+        color: "White Lightning",
+        mileage: 150000,
+        isWorking: true,
+
+       //function for honking
+        honk: function() {
+          alert("Hoooooonk");
+        },
+		//function for drive to work
+		driveToWork: function() {
+			alert("Old Mileage: " + car.mileage);
+
+			car.mileage = car.mileage + 8;
+
+			alert("New Mileage: " + car.mileage);	
+		},
+		//function to drive around the world
+		driveAroundWorld: function() {
+			alert("Old Mileage: " + car.mileage);
+
+			car.mileage = car.mileage + 24000;
+
+			alert("New Mileage: " + car.mileage);
+			alert("Car needs a tuneup!");
+
+			car.isWorking= false;
+		},
+		//function for tuneup
+		getTuneup: function() {
+			car.isWorking= true;
+			alert("Your car is ready to go!");
+		},
+
+
+		//function showing stats in console
+  }
+  	function writeStats(){
+		  console.log("Make: " + car.make);
+		  console.log("Model: " + car.model);
+		  console.log("Color: "+ car.color);
+		  console.log("Car is working: "+ car.isWorking);
+		  console.log("Mileage:" +car.mileage);
+		  console.log("_____________________________________________");  
+	  }
+	  	//keyboard input capture
+		  document.onkeyup = function(event) {
+			  var letter = event.key.toLowerCase();
+
+
+			if(letter === "h") {
+				car.honk();
+				writeStats();
+			}
+
+			if(letter === "d") {
+				car.driveToWork();
+				writeStats();
+			}
+
+			if(letter === "w") {
+				car.driveAroundWorld();
+				writeStats();
+			}
+
+			if(letter === "t") {
+				car.getTuneup();
+				writeStats();
+			}
+		  }
+
+</script>
+
+
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+   // Here we create our prompt and confirm variables which will store user input.
+      var confirmSteak = confirm("Do you eat steak?");
+      console.log(confirmSteak);
+      
+    
+
+      // If the user eats steak (confirmSteak === true), we run the following block of code.
+      if (confirmSteak) {
+        document.write("Here is a steak sandwich.");
+      }
+        else {
+        document.write("Here is a tofu stir-fry.");
+      }
+    
+        var howOld = prompt("What year were you born?");
+        console.log(howOld, typeof howOld);
+
+        if (howOld == null){
+        alert("never born, huh?")
+        }
+        else if (howOld <= 1998) {
+          alert("Sake For you, sweet bb!")
+        }  
+        else if (howOld >1998) {
+          alert("No Sake for you!")
+        }  
+    
+  
+  </script>
+
+</body>
+</html>
